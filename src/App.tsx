@@ -1,25 +1,14 @@
+import Providers from 'providers/Providers';
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Main from 'views/main/Main';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // Provider bevat het material-ui library standaard theme,
+    // de css hiervan wordt overschreden/aangepast met nieuwe styles vanuit de defaultThemeProvider
+    <Providers>
+      <Main />
+    </Providers>
   );
 }
 
